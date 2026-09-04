@@ -1,0 +1,16 @@
+CUDA_VISIBLE_DEVICES=0 python -m main.main --dataset=tut-urban-acoustic-scenes-2018 \
+    --data-root="/home/wakamatsu/DataSets3/TUT/TUT-urban-acoustic-scenes-2018-development" \
+    --domain_group=0 --n_task=6 --model=der --lr=1e-3 \
+    --incremental-lr=1e-3 \
+    --reset-training-state-per-task \
+    --scheduler=cosine_annealing \
+    --T_max=120 \
+    --eta_min=1e-5 \
+    --incremental-scheduler=same \
+    --n-epochs=120 --batch-size=128 --backbone=resnet18 \
+    --loss=ce --eval-protocol=domain-agnostic --epoch-scaling=const --alpha=0.05 --beta=0.5 \
+    --buffer-size=300 --buffer-batch-size=64 \
+    --visualize --checkpoint --num-workers=8 \
+    --opt=adam --seed=1208 --wandb-name=TUT-DER \
+    --hop_size=512 \
+    --is_audio=True

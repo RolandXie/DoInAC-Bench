@@ -1,0 +1,24 @@
+CUDA_VISIBLE_DEVICES=0 python -m main.main \
+    --dataset=librispeech \
+    --domain_group=4 \
+    --n_task=6 \
+    --model=adil \
+    --lr=1e-4 \
+    --incremental-lr=1e-4 \
+    --reset-training-state-per-task \
+    --incremental-scheduler=same \
+    --scheduler="cosine_annealing" \
+    --n-epochs=100 \
+    --batch-size=128 \
+    --backbone=resnet18_ds_bn_cl \
+    --loss=ce \
+    --epoch-scaling=const \
+    --eval-protocol=domain-agnostic \
+    --visualize \
+    --checkpoint \
+    --num-workers=8 \
+    --opt=adam \
+    --seed=1997 \
+    --wandb-name=Librispeech-FINETUNE \
+    --incremental-bn-init=d1 \
+    --is_audio=True

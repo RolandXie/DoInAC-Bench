@@ -1,0 +1,18 @@
+CUDA_VISIBLE_DEVICES=0 /home/wakamatsu/anaconda3/bin/conda run \
+    --no-capture-output -n udil python -m main.main --dataset=tut-urban-acoustic-scenes-2018 \
+    --domain_group=0 --n_task=6 --model=adil \
+    --lr=1e-3 --incremental-lr=1e-3 \
+    --reset-training-state-per-task --incremental-scheduler=same \
+    --incremental-bn-init=d1 \
+    --data-root="/home/wakamatsu/DataSets3/TUT/TUT-urban-acoustic-scenes-2018-development" \
+    --scheduler=cosine_annealing \
+    --T_max=120 \
+    --eta_min=1e-5 \
+    --n-epochs=120 \
+    --batch-size=128 \
+    --backbone=resnet18_ds_bn_cl --loss=ce --epoch-scaling=const \
+    --eval-protocol=domain-agnostic \
+    --checkpoint --num-workers=8 \
+    --opt=adam --seed=1997 --wandb-name=TUT-ADIL \
+    --hop_size=512 \
+    --is_audio=True --nowand "$@"
