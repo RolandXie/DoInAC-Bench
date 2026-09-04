@@ -95,6 +95,4 @@ The current implementation includes representative DIAC and continual-learning b
 
 ## License
 
-Please refer to the licenses of the original datasets when using the benchmark data.
-
-The source code in this repository is released under the LICENSE provided in this repository.
+Please check the MIT [license](./LISENCE)
