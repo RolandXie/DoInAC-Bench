@@ -1,8 +1,11 @@
-# DoInAC-Bench
-
-Official implementation of **DoInAC-Bench: A Domain-agnostic Incremental Audio Classification Benchmark**.
+<div align="center">
+  
+# DoInAC-Bench: A Domain-agnostic Incremental Audio Classification Benchmark
+<img width="563" height="90" alt="image" src="https://github.com/user-attachments/assets/ec1d76bc-4c3f-40f0-b0a8-5b76fe915fe1" />
+</div>
 
 ## Overview
+<img width="1030" height="401" alt="image" src="https://github.com/user-attachments/assets/16f08e66-3264-4af4-affc-169923246714" />
 
 DoInAC-Bench is a unified benchmark and evaluation framework for domain-incremental audio classification (DIAC).
 
@@ -16,7 +19,7 @@ The benchmark contains four complementary domain-shift scenarios:
 ## Repository Structure
 
 ```text
-• UDIL/
+DoInAC-Bench/
   ├── backbones/      # Backbone architectures (CNN14, ResNet18, MNIST-MLP, etc.)
   ├── datasets/       # Dataset definitions and data-loading utilities
   ├── main/           # Program entry point and continual-learning training pipeline
@@ -50,25 +53,27 @@ pip install -r requirements.txt
 
 The benchmark is constructed from publicly available audio datasets.
 
-Metadata, data splits, label mappings, and preprocessing instructions will be provided for reproducing the four benchmark scenarios.
+Metadata, data splits, label mappings, and preprocessing instructions are provided for reproducing the four benchmark scenarios.
 
-Detailed instructions can be found in:
+Detailed data preparation instructions can be found [here](./data/README.md).
 
-```text
-datasets/
-```
 
 ## Training
 
 Example:
 
 ```bash
-python train.py --config configs/example.yaml
+bash scripts/librispeech_adil.sh
 ```
 
-More experimental configurations and scripts will be provided in the `configs/` and `scripts/` directories.
+More experimental configurations and scripts will be provided in the [scripts](./scripts) directories.
 
 ## Evaluation
+<img width="1063" height="307" alt="image" src="https://github.com/user-attachments/assets/ed2c3d08-2090-4997-ad60-2843d23e8d71" />
+
+<img width="491" height="462" alt="image" src="https://github.com/user-attachments/assets/f3b94919-97f5-417c-a336-b7ef4868a991" />
+<img width="489" height="457" alt="image" src="https://github.com/user-attachments/assets/13dd407a-41fd-46f9-a9fc-4e29e2f9b5de" />
+
 
 DoInAC-Bench evaluates domain-incremental learning methods using metrics including:
 
@@ -80,10 +85,10 @@ DoInAC-Bench evaluates domain-incremental learning methods using metrics includi
 
 The current implementation includes representative DIAC and continual-learning baselines, including:
 
-* Sequential Fine-Tuning (SeqFT)
-* Experience Replay (ER)
+* SeqFT
+* ER
 * DER++
-* Learning without Forgetting (LwF)
+* LwF
 * ADIL
 * UDIL
 * Joint Training
