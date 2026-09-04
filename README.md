@@ -16,17 +16,21 @@ The benchmark contains four complementary domain-shift scenarios:
 ## Repository Structure
 
 ```text
-DoInAC-Bench/
-├── configs/        # Experimental configurations
-├── datasets/       # Dataset and metadata utilities
-├── methods/        # DIAC methods and baselines
-├── models/         # Model architectures
-├── scripts/        # Training and evaluation scripts
-├── utils/          # Common utilities
-├── requirements.txt
-└── README.md
+• UDIL/
+  ├── backbones/      # Backbone architectures (CNN14, ResNet18, MNIST-MLP, etc.)
+  ├── datasets/       # Dataset definitions and data-loading utilities
+  ├── main/           # Program entry point and continual-learning training pipeline
+  ├── models/         # Baselines: UDIL、ADIL、ER、DER、LwF、Joint、Fine-tune
+  ├── scheduler/      # Learning-rate schedulers
+  ├── scripts/        # Training and evaluation scripts for different experiments
+  ├── utils/          # Common utilities for arguments, replay buffers, losses, logging, and metrics
+  ├── tests/          # Checkpoint validation and experiment reproduction tests
+  ├── data/           # Dataset Meta files
+  ├── fig/            # Documentation and experimental-result figures
+  ├── eval*.sh        # Model evaluation launcher scripts
+  └── README.md       # Project overview, installation, and usage instructions
 ```
-
+  
 ## Installation
 
 Clone the repository:
