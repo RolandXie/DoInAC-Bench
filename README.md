@@ -69,7 +69,7 @@ bash scripts/librispeech_adil.sh
 More experimental configurations and scripts will be provided in the [scripts](./scripts) directories.
 
 ## Evaluation
-<img width="800" height="260" alt="image" src="https://github.com/user-attachments/assets/ed2c3d08-2090-4997-ad60-2843d23e8d71" />
+<img width="820" height="250" alt="image" src="https://github.com/user-attachments/assets/ed2c3d08-2090-4997-ad60-2843d23e8d71" />
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/f3b94919-97f5-417c-a336-b7ef4868a991" />
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/13dd407a-41fd-46f9-a9fc-4e29e2f9b5de" />
