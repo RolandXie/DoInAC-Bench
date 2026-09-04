@@ -71,8 +71,8 @@ More experimental configurations and scripts will be provided in the [scripts](.
 ## Evaluation
 <img width="1063" height="307" alt="image" src="https://github.com/user-attachments/assets/ed2c3d08-2090-4997-ad60-2843d23e8d71" />
 
-<img width="491" height="462" alt="image" src="https://github.com/user-attachments/assets/f3b94919-97f5-417c-a336-b7ef4868a991" />
-<img width="489" height="457" alt="image" src="https://github.com/user-attachments/assets/13dd407a-41fd-46f9-a9fc-4e29e2f9b5de" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/f3b94919-97f5-417c-a336-b7ef4868a991" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/13dd407a-41fd-46f9-a9fc-4e29e2f9b5de" />
 
 
 DoInAC-Bench evaluates domain-incremental learning methods using metrics including:
